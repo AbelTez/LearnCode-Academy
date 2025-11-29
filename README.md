@@ -1,6 +1,6 @@
-# SkillUp Academy – Training & Learning Center Website
+# CodeLearn – Training & Learning Center Website
 
-SkillUp Academy is a simple and responsive multi-page website designed for a fictional learning center or coding bootcamp.  
+CodeLearn is a simple and responsive multi-page website designed for a fictional learning center or coding bootcamp.  
 This project was created as part of a web development assignment to demonstrate practical skills in **HTML**, **CSS**, and page layout design.
 
 ---
