@@ -1,65 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning Center | SignIn</title>
-    <link rel="icon" href="image/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="myStyle.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img src="image/logo.png" alt="logo" />
-          <h2>CodeLearn</h2>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning Center | Sign Up</title>
+  <link rel="icon" href="image/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body class="auth-body">
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="image/logo.png" alt="logo" />
+        <h2>CodeLearn</h2>
+      </div>
+
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="about.html">About</a></li>
-
+          <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="login.html">login/</a><a href="signin.html">signin</a>
+            <a href="login.html" class="btn-login">Login</a>
+            <a href="signin.html" class="btn-signup" style="background: var(--primary-dark);">Sign Up</a>
           </li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-      <div>
-        <h1>WELCOME to <span>CodeLearn website</span></h1>
+  <main class="auth-main">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h2>Join Us Today</h2>
+        <p>Create an account and start learning.</p>
       </div>
 
-      <div>
-        <form class="myform" id="form">
-          <h3>SignIn</h3>
-          <label for="email">Email: </label>
-          <input type="email" id="email" placeholder="Enter your email" /><br />
+      <form class="auth-form" id="form">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="First Name" required />
+        </div>
 
-          <label for="fname">First Name: </label>
-          <input type="text" id="fname" placeholder="Enter your first name" />
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Last Name" required />
+        </div>
 
-          <label for="lname">Last Name: </label>
-          <input type="text" id="lname" placeholder="Enter your last name" />
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="name@example.com" required />
+        </div>
 
-          <label for="password">Password: </label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Password must be more than 8 characters"
-          />
-          <br />
-          <input type="submit" id="submit" />
-        </form>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Create a password (min 8 chars)" required />
+        </div>
+
+        <input type="submit" value="Sign Up" id="submit" />
+      </form>
+
+      <div class="auth-footer">
+        <p>Already have an account? <a href="login.html">Log in</a></p>
       </div>
-    </main>
-    <footer class="footer">
-      <div class="footer-content">
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="image/logo.png" alt="CodeLearn">
+        <h3>CodeLearn</h3>
+      </div>
+      <p class="footer-tagline">Empowering the next generation of developers.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="footer-bottom">
         <p>© 2025 CodeLearn. All Rights Reserved.</p>
         <p>Contact: info@codelearn.com | +251 994333127</p>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
