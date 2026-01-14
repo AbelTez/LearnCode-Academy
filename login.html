@@ -1,90 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Center | Login</title>
+    <link rel="icon" href="image/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learning Center | Login</title>
-  <link rel="icon" href="image/logo.png" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-</head>
-
-<body class="auth-body">
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="image/logo.png" alt="logo" />
-        <h2>CodeLearn</h2>
-      </div>
-
-      <div class="menu-toggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="login.html" class="btn-login" style="background: rgba(255,255,255,0.1);">Login</a>
-            <a href="signin.html" class="btn-signup">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main class="auth-main">
-    <div class="auth-card">
-      <div class="auth-header">
-        <h2>Welcome Back</h2>
-        <p>Login to continue your learning journey.</p>
-      </div>
-
-      <form class="auth-form" id="form">
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="name@example.com" required />
+  <body class="auth-body">
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="image/logo.png" alt="logo" />
+          <h2>LearnCode</h2>
         </div>
 
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Enter your password" required />
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a
+                href="login.html"
+                class="btn-login"
+                style="background: rgba(255, 255, 255, 0.1)"
+                >Login</a
+              >
+              <a href="signin.html" class="btn-signup">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="auth-main">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h2>Welcome Back</h2>
+          <p>Login to continue your learning journey.</p>
         </div>
 
-        <input type="submit" value="Log In" id="submit" />
-      </form>
+        <form class="auth-form" id="form">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
 
-      <div class="auth-footer">
-        <p>Don't have an account? <a href="signin.html">Sign up for free</a></p>
-      </div>
-    </div>
-  </main>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="image/logo.png" alt="CodeLearn">
-        <h3>CodeLearn</h3>
-      </div>
-      <p class="footer-tagline">Empowering the next generation of developers.</p>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 CodeLearn. All Rights Reserved.</p>
-        <p>Contact: info@codelearn.com | +251 994333127</p>
-      </div>
-    </div>
-  </footer>
-</body>
+          <input type="submit" value="Log In" id="submit" />
+        </form>
 
+        <div class="auth-footer">
+          <p>
+            Don't have an account? <a href="signin.html">Sign up for free</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="image/logo.png" alt="CodeLearn" />
+          <h3>CodeLearn</h3>
+        </div>
+        <p class="footer-tagline">
+          Empowering the next generation of developers.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 CodeLearn. All Rights Reserved.</p>
+          <p>Contact: info@codelearn.com | +251 994333127</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,244 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Center | Courses</title>
+    <link rel="icon" href="image/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learning Center | Courses</title>
-  <link rel="icon" href="image/logo.png" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-</head>
-
-<body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="image/logo.png" alt="logo" />
-        <h2>CodeLearn</h2>
-      </div>
-
-      <div class="menu-toggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html" class="active">Courses</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="login.html" class="btn-login">Login</a>
-            <a href="signin.html" class="btn-signup">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="courses-hero">
-      <div class="hero-content">
-        <h1 class="fade-in-up">Explore Unlimited Possibilities</h1>
-        <p class="fade-in-up delay-1">Master new skills with our top-rated courses.</p>
-
-        <div class="search-bar fade-in-up delay-2">
-          <i class="fas fa-search"></i>
-          <input type="text" placeholder="What do you want to learn today?" disabled>
-          <button>Search</button>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="image/logo.png" alt="logo" />
+          <h2>LearnCode</h2>
         </div>
 
-        <div class="popular-tags fade-in-up delay-3">
-          <span>Popular:</span>
-          <span class="tag">Python</span>
-          <span class="tag">Web Development</span>
-          <span class="tag">Data Science</span>
-          <span class="tag">Design</span>
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html" class="active">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="login.html" class="btn-login">Login</a>
+              <a href="signin.html" class="btn-signup">Sign Up</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </nav>
+    </header>
 
-    <!-- Filter Section (Visual Only) -->
-    <section class="filters-container">
-      <div class="filter-scroll">
-        <button class="filter-chip active">All Courses</button>
-        <button class="filter-chip">Development</button>
-        <button class="filter-chip">Design</button>
-        <button class="filter-chip">Business</button>
-        <button class="filter-chip">Marketing</button>
-        <button class="filter-chip">Photography</button>
-      </div>
-    </section>
+    <main>
+      <!-- Hero Section -->
+      <section class="courses-hero">
+        <div class="hero-content">
+          <h1 class="fade-in-up">Explore Unlimited Possibilities</h1>
+          <p class="fade-in-up delay-1">
+            Master new skills with our top-rated courses.
+          </p>
 
-    <!-- Course List -->
-    <section class="course-list-section">
-      <div class="section-header">
-        <h2>Featured Courses</h2>
-        <p>Hand-picked by our experts</p>
-      </div>
-
-      <div class="course-grid">
-        <!-- Course 1 -->
-        <div class="modern-course-card">
-          <div class="card-image">
-            <img src="image/web.jpg" alt="Web Development">
-            <span class="badge best-seller">Bestseller</span>
-            <div class="overlay">
-              <button class="preview-btn">Preview Course</button>
-            </div>
+          <div class="search-bar fade-in-up delay-2">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              placeholder="What do you want to learn today?"
+              disabled
+            />
+            <button>Search</button>
           </div>
-          <div class="card-content">
-            <div class="course-meta">
-              <span class="level"><i class="fas fa-signal"></i> Beginner</span>
-              <span class="duration"><i class="far fa-clock"></i> 3 Months</span>
-            </div>
-            <h3>Full Stack Web Development Bootcamp</h3>
-            <p class="instructor">
-              <img src="image/abenezer.jpg" alt="Instructor">
-              <span>Abenezer</span>
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span class="count">(4.9)</span>
-              <span class="students">12k students</span>
-            </div>
-            <div class="card-footer">
-              <div class="price">
-                <span class="current">$12.99</span>
-                <span class="original">$89.99</span>
+
+          <div class="popular-tags fade-in-up delay-3">
+            <span>Popular:</span>
+            <span class="tag">Python</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">Design</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter Section (Visual Only) -->
+      <section class="filters-container">
+        <div class="filter-scroll">
+          <button class="filter-chip active">All Courses</button>
+          <button class="filter-chip">Development</button>
+          <button class="filter-chip">Design</button>
+          <button class="filter-chip">Business</button>
+          <button class="filter-chip">Marketing</button>
+          <button class="filter-chip">Photography</button>
+        </div>
+      </section>
+
+      <!-- Course List -->
+      <section class="course-list-section">
+        <div class="section-header">
+          <h2>Featured Courses</h2>
+          <p>Hand-picked by our experts</p>
+        </div>
+
+        <div class="course-grid">
+          <!-- Course 1 -->
+          <div class="modern-course-card">
+            <div class="card-image">
+              <img src="image/web.jpg" alt="Web Development" />
+              <span class="badge best-seller">Bestseller</span>
+              <div class="overlay">
+                <button class="preview-btn">Preview Course</button>
               </div>
-              <a href="#" class="enroll-btn">Enroll Now</a>
             </div>
-          </div>
-        </div>
-
-        <!-- Course 2 -->
-        <div class="modern-course-card">
-          <div class="card-image">
-            <img src="image/python.jpg" alt="Python">
-            <span class="badge new">New</span>
-            <div class="overlay">
-              <button class="preview-btn">Preview Course</button>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="course-meta">
-              <span class="level"><i class="fas fa-signal"></i> All Levels</span>
-              <span class="duration"><i class="far fa-clock"></i> 2 Months</span>
-            </div>
-            <h3>Python for Data Science and AI</h3>
-            <p class="instructor">
-              <img src="image/biy.jpg" alt="Instructor">
-              <span>Biy</span>
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★☆</span>
-              <span class="count">(4.7)</span>
-              <span class="students">8.5k students</span>
-            </div>
-            <div class="card-footer">
-              <div class="price">
-                <span class="current">$14.99</span>
-                <span class="original">$94.99</span>
+            <div class="card-content">
+              <div class="course-meta">
+                <span class="level"
+                  ><i class="fas fa-signal"></i> Beginner</span
+                >
+                <span class="duration"
+                  ><i class="far fa-clock"></i> 3 Months</span
+                >
               </div>
-              <a href="#" class="enroll-btn">Enroll Now</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 3 -->
-        <div class="modern-course-card">
-          <div class="card-image">
-            <img src="image/ui.jpg" alt="UI/UX">
-            <span class="badge top-rated">Top Rated</span>
-            <div class="overlay">
-              <button class="preview-btn">Preview Course</button>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="course-meta">
-              <span class="level"><i class="fas fa-signal"></i> Intermediate</span>
-              <span class="duration"><i class="far fa-clock"></i> 1.5 Months</span>
-            </div>
-            <h3>UI/UX Design Masterclass</h3>
-            <p class="instructor">
-              <img src="image/abiy.jpg" alt="Instructor">
-              <span>Abiy</span>
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★★</span>
-              <span class="count">(4.95)</span>
-              <span class="students">5k students</span>
-            </div>
-            <div class="card-footer">
-              <div class="price">
-                <span class="current">$11.99</span>
-                <span class="original">$79.99</span>
+              <h3>Full Stack Web Development Bootcamp</h3>
+              <p class="instructor">
+                <img src="image/abenezer.jpg" alt="Instructor" />
+                <span>Abenezer</span>
+              </p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="count">(4.9)</span>
+                <span class="students">12k students</span>
               </div>
-              <a href="#" class="enroll-btn">Enroll Now</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 4 -->
-        <div class="modern-course-card">
-          <div class="card-image">
-            <img src="image/web.jpg" alt="Mobile App" style="filter: hue-rotate(45deg);">
-            <div class="overlay">
-              <button class="preview-btn">Preview Course</button>
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="course-meta">
-              <span class="level"><i class="fas fa-signal"></i> Advanced</span>
-              <span class="duration"><i class="far fa-clock"></i> 3 Months</span>
-            </div>
-            <h3>Mobile App Development with Flutter</h3>
-            <p class="instructor">
-              <img src="image/abenezer.jpg" alt="Instructor">
-              <span>Abenezer</span>
-            </p>
-            <div class="rating">
-              <span class="stars">★★★★☆</span>
-              <span class="count">(4.6)</span>
-              <span class="students">3k students</span>
-            </div>
-            <div class="card-footer">
-              <div class="price">
-                <span class="current">$15.99</span>
-                <span class="original">$99.99</span>
+              <div class="card-footer">
+                <div class="price">
+                  <span class="current">$12.99</span>
+                  <span class="original">$89.99</span>
+                </div>
+                <a href="#" class="enroll-btn">Enroll Now</a>
               </div>
-              <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="modern-course-card">
+            <div class="card-image">
+              <img src="image/python.jpg" alt="Python" />
+              <span class="badge new">New</span>
+              <div class="overlay">
+                <button class="preview-btn">Preview Course</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="course-meta">
+                <span class="level"
+                  ><i class="fas fa-signal"></i> All Levels</span
+                >
+                <span class="duration"
+                  ><i class="far fa-clock"></i> 2 Months</span
+                >
+              </div>
+              <h3>Python for Data Science and AI</h3>
+              <p class="instructor">
+                <img src="image/biy.jpg" alt="Instructor" />
+                <span>Biy</span>
+              </p>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="count">(4.7)</span>
+                <span class="students">8.5k students</span>
+              </div>
+              <div class="card-footer">
+                <div class="price">
+                  <span class="current">$14.99</span>
+                  <span class="original">$94.99</span>
+                </div>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="modern-course-card">
+            <div class="card-image">
+              <img src="image/ui.jpg" alt="UI/UX" />
+              <span class="badge top-rated">Top Rated</span>
+              <div class="overlay">
+                <button class="preview-btn">Preview Course</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="course-meta">
+                <span class="level"
+                  ><i class="fas fa-signal"></i> Intermediate</span
+                >
+                <span class="duration"
+                  ><i class="far fa-clock"></i> 1.5 Months</span
+                >
+              </div>
+              <h3>UI/UX Design Masterclass</h3>
+              <p class="instructor">
+                <img src="image/abiy.jpg" alt="Instructor" />
+                <span>Abiy</span>
+              </p>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="count">(4.95)</span>
+                <span class="students">5k students</span>
+              </div>
+              <div class="card-footer">
+                <div class="price">
+                  <span class="current">$11.99</span>
+                  <span class="original">$79.99</span>
+                </div>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4 -->
+          <div class="modern-course-card">
+            <div class="card-image">
+              <img
+                src="image/web.jpg"
+                alt="Mobile App"
+                style="filter: hue-rotate(45deg)"
+              />
+              <div class="overlay">
+                <button class="preview-btn">Preview Course</button>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="course-meta">
+                <span class="level"
+                  ><i class="fas fa-signal"></i> Advanced</span
+                >
+                <span class="duration"
+                  ><i class="far fa-clock"></i> 3 Months</span
+                >
+              </div>
+              <h3>Mobile App Development with Flutter</h3>
+              <p class="instructor">
+                <img src="image/abenezer.jpg" alt="Instructor" />
+                <span>Abenezer</span>
+              </p>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="count">(4.6)</span>
+                <span class="students">3k students</span>
+              </div>
+              <div class="card-footer">
+                <div class="price">
+                  <span class="current">$15.99</span>
+                  <span class="original">$99.99</span>
+                </div>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="image/logo.png" alt="CodeLearn">
-        <h3>CodeLearn</h3>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="image/logo.png" alt="CodeLearn" />
+          <h3>CodeLearn</h3>
+        </div>
+        <p class="footer-tagline">
+          Empowering the next generation of developers.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 CodeLearn. All Rights Reserved.</p>
+          <p>Contact: info@codelearn.com | +251 994333127</p>
+        </div>
       </div>
-      <p class="footer-tagline">Empowering the next generation of developers.</p>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 CodeLearn. All Rights Reserved.</p>
-        <p>Contact: info@codelearn.com | +251 994333127</p>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
