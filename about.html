@@ -1,124 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Center | About</title>
+    <link rel="icon" href="image/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learning Center | About</title>
-  <link rel="icon" href="image/logo.png" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-</head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="image/logo.png" alt="logo" />
+          <h2>CodeLearn</h2>
+        </div>
 
-<body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="image/logo.png" alt="logo" />
-        <h2>CodeLearn</h2>
-      </div>
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
 
-      <div class="menu-toggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="login.html" class="btn-login">Login</a>
+              <a href="signin.html" class="btn-signup">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="login.html" class="btn-login">Login</a>
-            <a href="signin.html" class="btn-signup">Sign Up</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1 class="fade-in-up">About CodeLearn</h1>
-        <p class="fade-in-up delay-1">Empowering the next generation of tech leaders.</p>
-      </div>
-    </section>
-
-    <section class="about-section">
-      <!-- Mission Card -->
-      <div style="max-width: 900px; margin: -60px auto 60px; position: relative; z-index: 10;">
-        <div class="modern-course-card"
-          style="padding: 40px; text-align: center; border: none; box-shadow: var(--shadow-lg);">
-          <h2 style="margin-bottom: 20px; color: var(--primary);">Our Mission</h2>
-          <p style="font-size: 1.25rem; line-height: 1.8; color: var(--text-light);">
-            To empower students with practical and job-ready tech skills. We believe in learning by doing and providing
-            a
-            supportive environment for everyone to grow.
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1 class="fade-in-up">About CodeLearn</h1>
+          <p class="fade-in-up delay-1">
+            Empowering the next generation of tech leaders.
           </p>
         </div>
-      </div>
+      </section>
 
-      <h2 class="fade-in-up delay-2" style="text-align: center; margin-bottom: 40px;">Meet Our Team</h2>
-      <div class="team-grid">
-        <div class="team-member fade-in-up delay-3">
-          <img src="image/abenezer.jpg" alt="Abel Tezare">
-          <h3>Abel Tezare</h3>
-          <p style="color: var(--primary); font-weight: 600;">Founder & Instructor</p>
-          <p style="font-size: 0.9rem; color: var(--text-light);">ID: UGR/6341/16</p>
-          <div style="margin-top: 15px;">
-            <a href="#" style="color: var(--text-light); margin: 0 5px;"><i class="fab fa-linkedin"></i></a>
-            <a href="#" style="color: var(--text-light); margin: 0 5px;"><i class="fab fa-twitter"></i></a>
+      <section class="about-section">
+        <!-- Mission Card -->
+        <div
+          style="
+            max-width: 900px;
+            margin: -60px auto 60px;
+            position: relative;
+            z-index: 10;
+          "
+        >
+          <div
+            class="modern-course-card"
+            style="
+              padding: 40px;
+              text-align: center;
+              border: none;
+              box-shadow: var(--shadow-lg);
+            "
+          >
+            <h2 style="margin-bottom: 20px; color: var(--primary)">
+              Our Mission
+            </h2>
+            <p
+              style="
+                font-size: 1.25rem;
+                line-height: 1.8;
+                color: var(--text-light);
+              "
+            >
+              To empower students with practical and job-ready tech skills. We
+              believe in learning by doing and providing a supportive
+              environment for everyone to grow.
+            </p>
           </div>
         </div>
 
-        <div class="team-member fade-in-up delay-3">
-          <img src="image/abiy.jpg" alt="Abduleziz zeinu">
-          <h3>Abdulazez Zeinu</h3>
-          <p style="color: var(--primary); font-weight: 600;">Founder & Instructor</p>
-          <p style="font-size: 0.9rem; color: var(--text-light);">ID: UGR/1223/14</p>
-          <div style="margin-top: 15px;">
-            <a href="#" style="color: var(--text-light); margin: 0 5px;"><i class="fab fa-linkedin"></i></a>
-            <a href="#" style="color: var(--text-light); margin: 0 5px;"><i class="fab fa-twitter"></i></a>
+        <h2
+          class="fade-in-up delay-2"
+          style="text-align: center; margin-bottom: 40px"
+        >
+          Meet Our Team
+        </h2>
+        <div class="team-grid">
+          <div class="team-member fade-in-up delay-3">
+            <img src="image/abenezer.jpg" alt="Abel Tezare" />
+            <h3>Abel Tezare</h3>
+            <p style="color: var(--primary); font-weight: 600">
+              Founder & Instructor
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              ID: UGR/6341/16
+            </p>
+            <div style="margin-top: 15px">
+              <a href="#" style="color: var(--text-light); margin: 0 5px"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" style="color: var(--text-light); margin: 0 5px"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="team-member fade-in-up delay-3">
+            <img src="image/abiy.jpg" alt="Abduleziz zeinu" />
+            <h3>Abdulazez Zeinu</h3>
+            <p style="color: var(--primary); font-weight: 600">
+              Founder & Instructor
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              ID: UGR/1223/14
+            </p>
+            <div style="margin-top: 15px">
+              <a href="#" style="color: var(--text-light); margin: 0 5px"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" style="color: var(--text-light); margin: 0 5px"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="team-member fade-in-up delay-3">
+            <img src="image/biy.jpg" alt="Eyosyas Tsegaye" />
+            <h3>Eyosyas Tsegaye</h3>
+            <p style="color: var(--primary); font-weight: 600">
+              Founder & Instructor
+            </p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              ID: UGR/8268/16
+            </p>
+            <div style="margin-top: 15px">
+              <a href="#" style="color: var(--text-light); margin: 0 5px"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" style="color: var(--text-light); margin: 0 5px"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="team-member fade-in-up delay-3">
-          <img src="image/biy.jpg" alt="Eyosyas Tsegaye">
-          <h3>Eyosyas Tsegaye</h3>
-          <p style="color: var(--primary); font-weight: 600;">Founder & Instructor</p>
-          <p style="font-size: 0.9rem; color: var(--text-light);">ID: UGR/8268/16</p>
-          <div style="margin-top: 15px;">
-            <a href="#" style="color: var(--text-light); margin: 0 5px;"><i class="fab fa-linkedin"></i></a>
-            <a href="#" style="color: var(--text-light); margin: 0 5px;"><i class="fab fa-twitter"></i></a>
-          </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="image/logo.png" alt="CodeLearn" />
+          <h3>CodeLearn</h3>
+        </div>
+        <p class="footer-tagline">
+          Empowering the next generation of developers.
+        </p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 CodeLearn. All Rights Reserved.</p>
+          <p>Contact: info@codelearn.com | +251 994333127</p>
         </div>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-logo">
-        <img src="image/logo.png" alt="CodeLearn">
-        <h3>CodeLearn</h3>
-      </div>
-      <p class="footer-tagline">Empowering the next generation of developers.</p>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 CodeLearn. All Rights Reserved.</p>
-        <p>Contact: info@codelearn.com | +251 994333127</p>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

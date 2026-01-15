@@ -12,9 +12,12 @@
   --white: #ffffff;
   --glassy: rgba(255, 255, 255, 0.8);
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -22,7 +25,7 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
   background-color: var(--bg-light);
   color: var(--text-dark);
   margin: 0;
@@ -134,13 +137,13 @@ main {
 
 .hero::before,
 .courses-hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('image/banner2.jpg');
+  background-image: url("image/banner2.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.15;
@@ -148,7 +151,7 @@ main {
 }
 
 .hero-content,
-.hero>* {
+.hero > * {
   position: relative;
   z-index: 1;
   max-width: 800px;
@@ -699,7 +702,7 @@ main {
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  background-image: url('image/pattern.png');
+  background-image: url("image/pattern.png");
   /* Optional subtle pattern */
   background-size: cover;
 }
@@ -997,7 +1000,11 @@ main {
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-dark) 100%
+  );
   padding: 80px 20px;
   text-align: center;
   color: var(--white);
@@ -1006,13 +1013,13 @@ main {
 }
 
 .cta-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('image/pattern.png');
+  background-image: url("image/pattern.png");
   opacity: 0.1;
 }
 
@@ -1096,9 +1103,8 @@ main {
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-      opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
 
   .menu-toggle span:first-child {
@@ -1109,18 +1115,18 @@ main {
     transform-origin: 0% 100%;
   }
 
-  .menu-toggle input:checked~span {
+  .menu-toggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: var(--white);
   }
 
-  .menu-toggle input:checked~span:nth-last-child(3) {
+  .menu-toggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
 
-  .menu-toggle input:checked~span:nth-last-child(2) {
+  .menu-toggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
 
@@ -1138,7 +1144,7 @@ main {
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
     transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     flex-direction: column;
     align-items: flex-start;
     box-shadow: -10px 0 20px rgba(0, 0, 0, 0.2);
@@ -1149,7 +1155,7 @@ main {
     font-size: 22px;
   }
 
-  .menu-toggle input:checked~ul {
+  .menu-toggle input:checked ~ ul {
     transform: none;
   }
 
@@ -1173,4 +1179,60 @@ main {
     justify-content: flex-start;
     gap: 4px;
   }
+}
+
+/* =========================================
+   11. Form Validation Helpers
+   ========================================= */
+.field-error {
+  border-color: #dc2626 !important;
+  background: #fef2f2 !important;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+/* =========================================
+   12. Preview Modal
+   ========================================= */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 640px;
+  box-shadow: var(--shadow-xl);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.4rem;
+  cursor: pointer;
 }

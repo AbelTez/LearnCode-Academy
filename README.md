@@ -23,6 +23,47 @@ This repository provides a clean, responsive template you can use to present cou
 
 ---
 
+## Upgrade Roadmap (Full-Stack)
+
+Goal: Evolve this static site into an interactive, component-based, data-driven full‑stack project.
+
+### Step 1: Vanilla JavaScript (done)
+
+- Adds `script.js` for interactivity across pages.
+- Features: mobile navbar toggle, client‑side form validation, course preview modal, simple testimonial carousel.
+
+Usage: open any HTML file in a browser — no build tool required.
+
+### Step 2: React Frontend (planned)
+
+- Create `frontend/` with a React SPA (components for `Header`, `Footer`, `Card`).
+- Routing with `react-router-dom` to mirror pages; state with hooks; fetch data via `src/api.js`.
+
+### Step 3: Node.js Backend (planned)
+
+- Create `backend/` using native `http` for REST endpoints (GET/POST/PUT/DELETE).
+- Add CORS so the React app can call the API.
+
+### Step 4: Database (planned)
+
+- Use MongoDB + Mongoose for JS-friendly persistence.
+- Store users, courses, and contact submissions.
+
+### Suggested structure
+
+```
+project-root/
+├─ frontend/
+│  └─ src/{components,pages,styles,api.js}
+├─ backend/
+│  └─ src/{app.js,routes,models,config}
+└─ database/ (optional for SQLite)
+```
+
+If you’d like, I can scaffold Steps 2–4 next and add run instructions.
+
+---
+
 ## Repository structure
 
 - `index.html` — Home / landing page
