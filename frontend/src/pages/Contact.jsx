@@ -1,78 +1,130 @@
 import React, { useState } from "react";
-import { api } from "../api";
 
-export default function Contact() {
+export default function Contact({ onOpenModal }) {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState(null);
-  const [loading, setLoading] = useState(false);
 
-  async function submit(e) {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    setStatus(null);
-    try {
-      await api.sendContact(form);
-      setStatus({ ok: true, message: "Message sent!" });
-      setForm({ name: "", email: "", message: "" });
-    } catch (err) {
-      setStatus({ ok: false, error: err.message });
-    } finally {
-      setLoading(false);
-    }
-  }
+    onOpenModal?.({
+      title: "Message sent",
+      body: `Thanks ${form.name || "there"}! We'll reply soon.`,
+    });
+    setForm({ name: "", email: "", message: "" });
+  };
 
   return (
-    <section
-      className="contact-form-card"
-      style={{ maxWidth: 700, margin: "40px auto" }}
-    >
-      <h2>Contact Us</h2>
-      <form className="auth-form" onSubmit={submit}>
-        <div className="form-group">
-          <label htmlFor="name">Your Name</label>
-          <input
-            id="name"
-            placeholder="Your Name"
-            required
-            value={form.name}
-            onChange={(e) => setForm({ ...form, name: e.target.value })}
-          />
+    <>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1 className="fade-in-up">Get in Touch</h1>
+          <p className="fade-in-up delay-1">
+            We'd love to hear from you. Reach out to us for any inquiries.
+          </p>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
-          <input
-            id="email"
-            type="email"
-            placeholder="Email"
-            required
-            value={form.email}
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-          />
+      </section>
+
+      <section className="contact-page-section">
+        <div className="contact-grid">
+          <div className="contact-info-card fade-in-up delay-2">
+            <h2>Contact Information</h2>
+            <p>Have questions? We are here to help.</p>
+
+            <div className="info-item">
+              <i className="fas fa-map-marker-alt"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Addis Ababa, Ethiopia</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <i className="fas fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <p>+251 994333127</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <i className="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>info@codelearn.com</p>
+              </div>
+            </div>
+
+            <div className="social-connect">
+              <h3>Follow Us</h3>
+              <div className="social-icons">
+                <a href="#">
+                  <i className="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                  <i className="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                  <i className="fab fa-linkedin"></i>
+                </a>
+                <a href="#">
+                  <i className="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-form-card fade-in-up delay-3">
+            <h2>Send us a Message</h2>
+            <form className="auth-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@example.com"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="How can we help you?"
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+              </div>
+
+              <input type="submit" value="Send Message" />
+            </form>
+          </div>
         </div>
-        <div className="form-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            rows={4}
-            placeholder="How can we help?"
-            required
-            value={form.message}
-            onChange={(e) => setForm({ ...form, message: e.target.value })}
-          />
-        </div>
-        <input
-          type="submit"
-          value={loading ? "Sending..." : "Send Message"}
-          disabled={loading}
-        />
-      </form>
-      {status && (
-        <div
-          style={{ marginTop: 12, color: status.ok ? "#16a34a" : "#dc2626" }}
-        >
-          {status.ok ? status.message : status.error}
-        </div>
-      )}
-    </section>
+      </section>
+    </>
   );
 }

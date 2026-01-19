@@ -1,49 +1,67 @@
 import React from "react";
 
-export function CourseCard({ course }) {
+export default function CourseCard({ course, onPreview }) {
   return (
     <div className="modern-course-card">
       <div className="card-image">
-        <img src={course.image || "/image/web.jpg"} alt={course.title} />
-        <span className="badge best-seller">{course.level || "Course"}</span>
+        <img src={course.image} alt={course.title} />
+        {course.badge && (
+          <span className={`badge ${course.badgeClass || ""}`}>
+            {course.badge}
+          </span>
+        )}
         <div className="overlay">
-          <button className="preview-btn">Preview Course</button>
+          <button className="preview-btn" onClick={() => onPreview?.(course)}>
+            Preview Course
+          </button>
         </div>
       </div>
       <div className="card-content">
-        <div className="course-meta">
-          <span className="level">
-            <i className="fas fa-signal"></i> {course.level || "All Levels"}
-          </span>
-          <span className="duration">
-            <i className="far fa-clock"></i> {course.duration || "Self-paced"}
-          </span>
-        </div>
-        <h3>{course.title}</h3>
-        <p className="instructor">
-          <img
-            src={course.instructorAvatar || "/image/abenezer.jpg"}
-            alt="Instructor"
-          />
-          <span>{course.instructor || "Instructor"}</span>
-        </p>
-        <div className="rating">
-          <span className="stars">
-            {"★★★★★".slice(0, 1 + Math.round(course.rating || 4))}
-          </span>
-          <span className="count">({course.rating || "4.7"})</span>
-          <span className="students">
-            {course.students ? `${course.students} students` : ""}
-          </span>
-        </div>
-        <div className="card-footer">
-          <div className="price">
-            <span className="current">${course.price || "12.99"}</span>
+        {course.meta && (
+          <div className="course-meta">
+            <span className="level">
+              <i className="fas fa-signal" /> {course.meta.level}
+            </span>
+            <span className="duration">
+              <i className="far fa-clock" /> {course.meta.duration}
+            </span>
           </div>
-          <a href="#" className="enroll-btn">
-            Enroll Now
-          </a>
-        </div>
+        )}
+        <h3>{course.title}</h3>
+        {course.instructor && (
+          <p className="instructor">
+            {course.instructor.avatar && (
+              <img src={course.instructor.avatar} alt="Instructor" />
+            )}
+            <span>{course.instructor.name}</span>
+          </p>
+        )}
+        {course.rating && (
+          <div className="rating">
+            <span className="stars">{course.rating.stars}</span>
+            <span className="count">({course.rating.count})</span>
+            {course.rating.students && (
+              <span className="students">{course.rating.students}</span>
+            )}
+          </div>
+        )}
+        {course.price && (
+          <div className="card-footer">
+            <div className="price">
+              <span className="current">{course.price.current}</span>
+              {course.price.original && (
+                <span className="original">{course.price.original}</span>
+              )}
+            </div>
+            <a
+              href="#"
+              className="enroll-btn"
+              onClick={(e) => e.preventDefault()}
+            >
+              Enroll Now
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

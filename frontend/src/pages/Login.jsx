@@ -1,70 +1,69 @@
 import React, { useState } from "react";
-import { api } from "../api";
+import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Login({ onOpenModal }) {
   const [form, setForm] = useState({ email: "", password: "" });
-  const [status, setStatus] = useState(null);
-  const [loading, setLoading] = useState(false);
 
-  async function submit(e) {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
-    setStatus(null);
-    try {
-      const res = await api.login(form);
-      setStatus({
-        ok: true,
-        message: `Welcome back, ${res.user.name || res.user.email}`,
-      });
-    } catch (err) {
-      setStatus({ ok: false, error: err.message });
-    } finally {
-      setLoading(false);
-    }
-  }
+    onOpenModal?.({
+      title: "Login",
+      body: "Login submission captured. Backend integration coming soon.",
+    });
+    setForm({ email: "", password: "" });
+  };
 
   return (
-    <section className="auth-main">
-      <div className="auth-card">
-        <div className="auth-header">
-          <h2>Welcome Back</h2>
-          <p>Login to continue your learning journey.</p>
+    <div className="auth-body">
+      <main className="auth-main">
+        <div className="auth-card">
+          <div className="auth-header">
+            <h2>Welcome Back</h2>
+            <p>Login to continue your learning journey.</p>
+          </div>
+
+          <form className="auth-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@example.com"
+                value={form.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                value={form.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            <input type="submit" value="Log In" />
+          </form>
+
+          <div className="auth-footer">
+            <p>
+              Don't have an account? <Link to="/signin">Sign up for free</Link>
+            </p>
+          </div>
         </div>
-        <form className="auth-form" onSubmit={submit}>
-          <div className="form-group">
-            <label htmlFor="email">Email Address</label>
-            <input
-              id="email"
-              type="email"
-              required
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              id="password"
-              type="password"
-              required
-              value={form.password}
-              onChange={(e) => setForm({ ...form, password: e.target.value })}
-            />
-          </div>
-          <input
-            type="submit"
-            value={loading ? "Signing in..." : "Log In"}
-            disabled={loading}
-          />
-        </form>
-        {status && (
-          <div
-            style={{ marginTop: 12, color: status.ok ? "#16a34a" : "#dc2626" }}
-          >
-            {status.ok ? status.message : status.error}
-          </div>
-        )}
-      </div>
-    </section>
+      </main>
+    </div>
   );
 }
